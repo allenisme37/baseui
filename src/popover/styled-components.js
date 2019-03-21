@@ -32,7 +32,6 @@ export function getBodyStyles(props: SharedStylePropsT) {
     position: 'absolute',
     top: 0,
     left: 0,
-    zIndex: 1050,
     backgroundColor: $theme.colors.background,
     borderRadius: $theme.borders.useRoundedCorners
       ? $theme.borders.radius300
@@ -67,7 +66,6 @@ export function getArrowStyles(props: SharedStylePropsT) {
     height: `${ARROW_WIDTH}px`,
     transform: 'rotate(45deg)',
     position: 'absolute',
-    zIndex: 1, // Below "Inner"
     ...getArrowPositionStyles($arrowOffset, $placement),
   };
 }
@@ -88,7 +86,6 @@ export function getInnerStyles({$theme}: SharedStylePropsT) {
       ? $theme.borders.radius300
       : '0px',
     position: 'relative',
-    zIndex: 2, // Above "Arrow"
   };
 }
 
